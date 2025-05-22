@@ -22,7 +22,7 @@ namespace V1._0
             string taskName = txtTask.Text.Trim();
             string dueDateText = txtDueDate.Text.Trim();
 
-            // Check for empty inputs
+            // Check for empty fields
             if (string.IsNullOrWhiteSpace(taskName) || string.IsNullOrWhiteSpace(dueDateText))
             {
                 MessageBox.Show("Task name and due date cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -37,10 +37,10 @@ namespace V1._0
                 return;
             }
 
-            // Add to list
+            // Add task to the list
             listBoxTasks.Items.Add(taskName + " - Due: " + dueDate.ToShortDateString());
 
-            // Clear fields
+            // Clear inputs
             txtTask.Clear();
             txtDueDate.Clear();
         }
